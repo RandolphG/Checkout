@@ -38,11 +38,11 @@ class App extends Component {
     handleChange(e) {
         this.setState(
             {promoCode: e.target.value})
-        console.log(`you typed ${this.state.promoCode}`)
+        console.log(`typed ${this.state.promoCode}`)
     }
 
     giveDiscountHandler() {
-        console.log(`clicked${this.state.promoCode} button`)
+        console.log(`total ${this.state.total} \nPickupSavings ${this.state.PickupSavings} \ntaxes ${this.state.taxes.toFixed(2)} `)
         if(this.state.promoCode === 'DISCOUNT') {
             this.setState({
                               EstimatedTotal: this.state.EstimatedTotal * 0.9,
