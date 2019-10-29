@@ -3,7 +3,7 @@ import {Row, Col, Tooltip, OverlayTrigger} from "react-bootstrap";
 
 const styles = {
     pickupSavings: {
-        textDecoration: 'underline',
+        textDecoration: 'none',
     },
     totalSavings: {
         color: 'red',
@@ -12,6 +12,7 @@ const styles = {
 }
 
 class PickupSavings extends Component {
+
     render() {
         const tooltip = (
             <Tooltip id={'tooltip'}>
@@ -22,7 +23,7 @@ class PickupSavings extends Component {
 
             <Row className={'show-grid'}>
                 <Col md={6}>
-                    <OverlayTrigger placement={'bottom'} overlay={tooltip}>
+                    <OverlayTrigger placement={'left'} overlay={tooltip}>
                         <div style={styles.pickupSavings}>Pickup Savings</div>
                     </OverlayTrigger>
                 </Col>

@@ -12,12 +12,13 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            promoCode: '',
             total: 250,
             PickupSavings: -2.78,
             taxes: 0,
             EstimatedTotal: 0,
             disablePromoButton: false,
-            quantity:10
+            quantity: 10, style: {},
         };
     }
 
@@ -34,8 +35,14 @@ class App extends Component {
         })
     }
 
+    handleChange(e) {
+        this.setState(
+            {promoCode: e.target.value})
+        console.log(`you typed ${this.state.promoCode}`)
+    }
+
     giveDiscountHandler() {
-        console.log('clicked')
+        console.log(`clicked${this.state.promoCode} button`)
         if(this.state.promoCode === 'DISCOUNT') {
             this.setState({
                               EstimatedTotal: this.state.EstimatedTotal * 0.9,
@@ -58,7 +65,9 @@ class App extends Component {
                     <EstimatedTotal price={this.state.EstimatedTotal.toFixed(2)}/>
                     <ItemDetails price={this.state.EstimatedTotal.toFixed(2)} quantity={this.state.quantity}/>
                     <PromoCode giveDiscount={(e) => this.giveDiscountHandler(e)}
-                               isDisabled={this.state.disablePromoButton}/>
+                               isDisabled={this.state.disablePromoButton}
+                               promoCode={this.state.promoCode}
+                               handleChange={this.handleChange.bind(this)}/>
                 </Container>
             </div>
         );

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Button, Collapse, Card, Form, Row, Col, FormGroup, FormControl, FormLabel} from "react-bootstrap";
+import {Button, Collapse, Card, Form, Col, FormGroup, FormControl, FormLabel} from "react-bootstrap";
 
 class PromoCode extends Component {
     constructor(props) {
@@ -11,12 +11,12 @@ class PromoCode extends Component {
                 button: {
                     marginTop: 10,
                 },
-                collapse:{
-                    marginTop: 10
+                collapse: {
+                    marginTop: 10,
                 },
-                applyButton:{
-                    marginBottom:10
-                }
+                applyButton: {
+                    marginBottom: 10,
+                },
             },
         }
     }
@@ -41,7 +41,7 @@ class PromoCode extends Component {
                                     <FormControl type={'text'}
                                                  placeholder={'Enter promo code'}
                                                  value={this.props.promoCode}
-                                                 onChange={this.handleChange}/>
+                                                 onChange={this.props.handleChange}/>
                                 </FormGroup>
                                 <Button style={this.state.style.applyButton} block
                                         bsStyle={'success'}
@@ -55,6 +55,7 @@ class PromoCode extends Component {
             </div>
         )
     }
+
 }
 
 export default PromoCode;

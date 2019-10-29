@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {MediaBody, Button, Card, Collapse, Media, Row, Col} from "react-bootstrap";
+import { Button, Card, Collapse, Media, Row, Col} from "react-bootstrap";
 
 class ItemDetails extends Component {
     constructor(props) {
