@@ -18,7 +18,7 @@
 $ git clone https://github.com/RandolphG/checkout-module.git
 $ cd project
 $ npm i
-$ npm run electron 
+$ npm start 
 ```
 ## Features
 - checkout module
