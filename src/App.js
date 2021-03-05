@@ -6,7 +6,6 @@ import TaxesFees from "./components/TaxesFees/TaxesFees";
 import EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import PromoCode from "./components/PromoCode/PromoCode";
-import './App.css';
 
 class App extends Component {
     constructor(props) {
